@@ -1,0 +1,7 @@
+E:\Настя\6sem\КМЗИ\ConsoleApp2\ConsoleApp2\bin\Debug\ConsoleApp2.exe.config
+E:\Настя\6sem\КМЗИ\ConsoleApp2\ConsoleApp2\bin\Debug\ConsoleApp2.exe
+E:\Настя\6sem\КМЗИ\ConsoleApp2\ConsoleApp2\bin\Debug\ConsoleApp2.pdb
+E:\Настя\6sem\КМЗИ\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.csprojResolveAssemblyReference.cache
+E:\Настя\6sem\КМЗИ\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.CoreCompileInputs.cache
+E:\Настя\6sem\КМЗИ\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.exe
+E:\Настя\6sem\КМЗИ\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.pdb
