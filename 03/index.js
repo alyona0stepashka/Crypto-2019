@@ -9,10 +9,6 @@ function cesarCrypt(text, key){
     }
     return rc;
 }
-console.log();
-console.log(cesarCrypt('abcdefgh', 1));
-console.log('***************');
-
 //vizhener
 
 function vizhenerCrypt(text, key){
@@ -35,10 +31,19 @@ function vizhenerCrypt(text, key){
     return rc;
 }
 
-vizhenerCrypt('ATTACKATDAWN', 'LEMON');
-console.log('***************');
 
-//affinny
+
+
+function MyNewCipher(text){
+  let rc ='';
+  text=text.toUpperCase();
+  for (let i=text.length-1;i>=0;i--)
+  {
+    rc += text[i];
+}
+return rc;
+}
+
 
 function MyCipher(text){
   let rc ='';
@@ -53,6 +58,7 @@ return rc;
 //E(x) = (ax +b) mod m
 //D = a(-1)*(x-b) mod m
 
+//affinny
 function affynnyCrypt(text){
     let a = 3;
     let b = 4;
@@ -66,8 +72,18 @@ function affynnyCrypt(text){
     return rc;
 }
 
+
+console.log(cesarCrypt('abcdefgh', 1));
+console.log('---/Cezar/------------------------');
+
+vizhenerCrypt('ATTACKATDAWN', 'LEMON');
+console.log('---/Vizhener/---------------------');
+
 console.log(affynnyCrypt('ATTACKATDAWN'));
-console.log('***************');
+console.log('---/AffynnyCrypt/-----------------');
 
 console.log(MyCipher('ATTACKATDAWN'));
-console.log('***************');
+console.log('---/MyCipher/---------------------');
+
+console.log(MyNewCipher('ATTACKATDAWN'));
+console.log('---/New/--------------------------');
