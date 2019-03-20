@@ -31,11 +31,9 @@ function vizhenerCrypt(text, key){
     return rc;
 }
 
-
-
-
 function MyNewCipher(text){
   let rc ='';
+  let key =0;
   text=text.toUpperCase();
   for (let i=text.length-1;i>=0;i--)
   {
@@ -55,6 +53,9 @@ function MyCipher(text){
 }
 return rc;
 }
+
+
+
 //E(x) = (ax +b) mod m
 //D = a(-1)*(x-b) mod m
 
@@ -79,8 +80,7 @@ console.log('---/Cezar/------------------------');
 vizhenerCrypt('ATTACKATDAWN', 'LEMON');
 console.log('---/Vizhener/---------------------');
 
-console.log(affynnyCrypt('ATTACKATDAWN'));
-console.log('---/AffynnyCrypt/-----------------');
+console.log(affynnyCrypt('ATTACKATDAWN'));                                                                                                                                                                            
 
 console.log(MyCipher('ATTACKATDAWN'));
 console.log('---/MyCipher/---------------------');
