@@ -10,8 +10,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("-------NOD(21,3) = " + Class1.GetNOD(21, 3));
-            Console.WriteLine("-------Reverce by n (a=12,b=8,n=2) = " + Class1.BinModPow(12, 8, 2));
+            Console.WriteLine("-------|NOD(21,3) = " + Class1.GetNOD(21, 3)+"|");
+            Console.WriteLine("-------|Reverse by n (a=8,n=13) = " + Class1.GetReverse(8, 13) + "|");
             Console.ReadKey();
         }
     }

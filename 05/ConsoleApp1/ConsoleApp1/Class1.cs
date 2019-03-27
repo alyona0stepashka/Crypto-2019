@@ -17,6 +17,18 @@ namespace ConsoleApp1
             else
                 return GetNOD(val2, val1 % val2);
         }
+        public static int GetReverse(int a, int n)
+        {
+            for (int x = 1; x < Int32.MaxValue; x++)
+            {
+                if ((a * x) % n == 1)
+                {
+                    return x;
+                }
+            }
+            return 0;
+
+        }
 
         public static double BinModPow(double a, double b, double n)
         {
