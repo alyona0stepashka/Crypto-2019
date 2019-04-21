@@ -1,0 +1,2 @@
+C:\Users\GRN\Desktop\[5-8]Crypto_Labs\Lab7\obj\Debug\Lab7.csprojResolveAssemblyReference.cache
+C:\Users\GRN\Desktop\[5-8]Crypto_Labs\Lab7\obj\Debug\Lab7.csproj.CoreCompileInputs.cache
