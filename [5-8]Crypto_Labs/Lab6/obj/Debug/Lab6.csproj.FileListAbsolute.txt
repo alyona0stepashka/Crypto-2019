@@ -12,3 +12,10 @@ E:\РАБОЧЕЕ\3 КУРС 2 СЕМ\Крипта\[5-8]Crypto_Labs\Lab6\obj\Deb
 E:\РАБОЧЕЕ\3 КУРС 2 СЕМ\Крипта\[5-8]Crypto_Labs\Lab6\obj\Debug\Lab6.csproj.CoreCompileInputs.cache
 E:\РАБОЧЕЕ\3 КУРС 2 СЕМ\Крипта\[5-8]Crypto_Labs\Lab6\obj\Debug\Lab6.exe
 E:\РАБОЧЕЕ\3 КУРС 2 СЕМ\Крипта\[5-8]Crypto_Labs\Lab6\obj\Debug\Lab6.pdb
+D:\Study\3k2s\GitRep\Crypto-2019\[5-8]Crypto_Labs\Lab6\bin\Debug\Lab6.exe.config
+D:\Study\3k2s\GitRep\Crypto-2019\[5-8]Crypto_Labs\Lab6\bin\Debug\Lab6.exe
+D:\Study\3k2s\GitRep\Crypto-2019\[5-8]Crypto_Labs\Lab6\bin\Debug\Lab6.pdb
+D:\Study\3k2s\GitRep\Crypto-2019\[5-8]Crypto_Labs\Lab6\obj\Debug\Lab6.csprojResolveAssemblyReference.cache
+D:\Study\3k2s\GitRep\Crypto-2019\[5-8]Crypto_Labs\Lab6\obj\Debug\Lab6.csproj.CoreCompileInputs.cache
+D:\Study\3k2s\GitRep\Crypto-2019\[5-8]Crypto_Labs\Lab6\obj\Debug\Lab6.exe
+D:\Study\3k2s\GitRep\Crypto-2019\[5-8]Crypto_Labs\Lab6\obj\Debug\Lab6.pdb
