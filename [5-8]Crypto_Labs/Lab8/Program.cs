@@ -12,6 +12,18 @@ namespace Lab8
         1. Разработать программную реализацию шифрования алгоритмом RSA.
         2. Разработать программную реализацию шифрования алгоритмом Эль-Гамаля.
          */
+
+        /*
+         2п qn
+         1. x => X q^x % n
+         2. k = Y^x % n
+         /
+         1. 1п p, xq<p
+         2. y = q^x % p
+         k
+         C: q^k % p / y^k % p
+         D: b/a^x % p
+         */
         private static void Main()
         {
             Console.WriteLine("Enter crypted string");

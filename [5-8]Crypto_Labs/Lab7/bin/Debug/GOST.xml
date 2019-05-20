@@ -1,0 +1,478 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GOST</name>
+    </assembly>
+    <members>
+        <member name="M:GOST.Ciphers.MACGenerator.Process(System.Byte[],System.Collections.Generic.List{System.UInt32})">
+            <summary>
+            MAC generator.
+            </summary>
+            <param name="data">Message.</param>
+            <param name="subKeys">Subkeys.</param>
+            <returns>MAC.</returns>
+        </member>
+        <member name="M:GOST.Ciphers.MACGenerator.ShortSubstitute(System.UInt32,System.UInt32,System.Collections.Generic.List{System.UInt32})">
+            <summary>
+            16-round version of substitution cipher.
+            </summary>
+            <param name="little">Little bits.</param>
+            <param name="big">Big bits.</param>
+            <param name="subKeys">Subkeys.</param>
+            <returns>Result.</returns>
+        </member>
+        <member name="M:GOST.Ciphers.MACGenerator.Function(System.UInt32,System.UInt32)">
+            <summary>
+            Main func.
+            </summary>
+            <param name="block">Little bits.</param>
+            <param name="subKey">Subkeys.</param>
+            <returns>Result.</returns>
+        </member>
+        <member name="M:GOST.Ciphers.MACGenerator.Substitute(System.UInt32)">
+            <summary>
+            Substitution.
+            </summary>
+            <param name="value">Block for substitution.</param>
+            <returns>Result.</returns>
+        </member>
+        <member name="M:GOST.Ciphers.CFBCipher.SetIV(System.Byte[])">
+            <summary>
+            Set generator state.
+            </summary>
+            <param name="iv">IV</param>
+        </member>
+        <member name="M:GOST.Ciphers.CFBCipher.EncodeProcess(System.Byte[],System.Collections.Generic.List{System.UInt32})">
+            <summary>
+            CFB encode.
+            </summary>
+            <param name="data">Opened message.</param>
+            <param name="subKeys">Subkeys.</param>
+            <returns>Encoded message.</returns>
+        </member>
+        <member name="M:GOST.Ciphers.CFBCipher.DecodeProcess(System.Byte[],System.Collections.Generic.List{System.UInt32})">
+            <summary>
+            CFB decode.
+            </summary>
+            <param name="data">Encoded message.</param>
+            <param name="subKeys">Subkeys.</param>
+            <returns>Opened message.</returns>
+        </member>
+        <member name="M:GOST.Ciphers.CFBCipher.XOR(System.Byte[],System.Byte[])">
+            <summary>
+            XOR
+            </summary>
+            <param name="gamma">Gamma.</param>
+            <param name="data">Data.</param>
+            <returns>XOR result..</returns>
+        </member>
+        <member name="M:GOST.Ciphers.SubstitutionCipher.EncodeProcess(System.Byte[],System.Collections.Generic.List{System.UInt32})">
+            <summary>
+            Substitution encode.
+            </summary>
+            <param name="data">Opened message multiple of 64 bits.</param>
+            <param name="subKeys">Subkeys.</param>
+            <returns>Encoded message multiple of 64 bits.</returns>
+        </member>
+        <member name="M:GOST.Ciphers.SubstitutionCipher.DecodeProcess(System.Byte[],System.Collections.Generic.List{System.UInt32})">
+            <summary>
+            Substitution decode.
+            </summary>
+            <param name="data">Encoded message multiple of 64 bits.</param>
+            <param name="subKeys">Subkeys.</param>
+            <returns>Opened message multiple of 64 bits.</returns>
+        </member>
+        <member name="M:GOST.Ciphers.SubstitutionCipher.Function(System.UInt32,System.UInt32)">
+            <summary>
+            Main func.
+            </summary>
+            <param name="block">Little bits.</param>
+            <param name="subKey">Subkeys.</param>
+            <returns>Result.</returns>
+        </member>
+        <member name="M:GOST.Ciphers.SubstitutionCipher.Substitute(System.UInt32)">
+            <summary>
+            Substitution.
+            </summary>
+            <param name="value">Block for substitution.</param>
+            <returns>Result.</returns>
+        </member>
+        <member name="M:GOST.Ciphers.XORCipher.SetIV(System.Byte[],System.Collections.Generic.List{System.UInt32})">
+            <summary>
+            Первоначальная установка состояния шифра.
+            </summary>
+            <param name="iv">Синхропосылка.</param>
+            <param name="subKeys">Подключи.</param>
+        </member>
+        <member name="M:GOST.Ciphers.XORCipher.EncodeProcess(System.Byte[],System.Collections.Generic.List{System.UInt32})">
+            <summary>
+            Процесс шифрования открытого текста
+            </summary>
+            <param name="data">Блок открытого текста.</param>
+            <param name="subKeys">Коллекция подключей.</param>
+            <returns>Блок шифротекста.</returns>
+        </member>
+        <member name="M:GOST.Ciphers.XORCipher.DecodeProcess(System.Byte[],System.Collections.Generic.List{System.UInt32})">
+            <summary>
+            Процесс дешифровки шифротекста.
+            </summary>
+            <param name="data">Блок открытого текста.</param>
+            <param name="subKeys">Коллекция подключей.</param>
+            <returns>Блок открытого текста.</returns>
+        </member>
+        <member name="M:GOST.Ciphers.XORCipher.XOR(System.Byte[],System.Byte[])">
+            <summary>
+            Применение XOR между гаммой и блоком данных.
+            </summary>
+            <param name="gamma">Гамма.</param>
+            <param name="data">Блок данных.</param>
+            <returns>Результат XOR.</returns>
+        </member>
+        <member name="M:GOST.Interfaces.IMACGenerator.Process(System.Byte[],System.Collections.Generic.List{System.UInt32})">
+            <summary>
+            MAC generator.
+            </summary>
+            <param name="data">Message.</param>
+            <param name="subKeys">Subkeys.</param>
+            <returns>MAC.</returns>
+        </member>
+        <member name="M:GOST.Interfaces.IManaged.SubstitutionEncode(System.Byte[],System.Byte[],GOST.Types.SBlockTypes)">
+            <summary>
+            Substitution encode.
+            </summary>
+            <param name="key">256 bit key.</param>
+            <param name="message">Opened message multiple of 64 bit.</param>
+            <param name="sBlockType">STable.</param>
+            <returns>Encoded message.</returns>
+        </member>
+        <member name="M:GOST.Interfaces.IManaged.SubstitutionDecode(System.Byte[],System.Byte[],GOST.Types.SBlockTypes)">
+            <summary>
+            Substitution decode.
+            </summary>
+            <param name="key">256 bit key.</param>
+            <param name="message">Encoded message multiple of 64 bit.</param>
+            <param name="sBlockType">STable.</param>
+            <returns>Opened message</returns>
+        </member>
+        <member name="M:GOST.Interfaces.IManaged.XOREncode(System.Byte[],System.Byte[],System.Byte[],GOST.Types.SBlockTypes)">
+            <summary>
+            XOR encode.
+            </summary>
+            <param name="key">256 bit key.</param>
+            <param name="iv">64 bit IV</param>
+            <param name="message">Opened message.</param>
+            <param name="sBlockType">STable.</param>
+            <returns>Encoded message.</returns>
+        </member>
+        <member name="M:GOST.Interfaces.IManaged.XORDecode(System.Byte[],System.Byte[],System.Byte[],GOST.Types.SBlockTypes)">
+            <summary>
+            XOR decode.
+            </summary>
+            <param name="key">256 bit key.</param>
+            <param name="iv">64 bit IV</param>
+            <param name="message">Encoded message.</param>
+            <param name="sBlockType">STable.</param>
+            <returns>Opened message.</returns>
+        </member>
+        <member name="M:GOST.Interfaces.IManaged.CFBEncode(System.Byte[],System.Byte[],System.Byte[],GOST.Types.SBlockTypes)">
+            <summary>
+            CFB encode.
+            </summary>
+            <param name="key">256 bit key.</param>
+            <param name="iv">64 bit IV</param>
+            <param name="message">Opened message.</param>
+            <param name="sBlockType">STable.</param>
+            <returns>Encoded message.</returns>
+        </member>
+        <member name="M:GOST.Interfaces.IManaged.CFBDecode(System.Byte[],System.Byte[],System.Byte[],GOST.Types.SBlockTypes)">
+            <summary>
+            CFB decode.
+            </summary>
+            <param name="key">256 bit key.</param>
+            <param name="iv">64 bit IV</param>
+            <param name="message">Encoded message.</param>
+            <param name="sBlockType">STable.</param>
+            <returns>Opened message.</returns>
+        </member>
+        <member name="M:GOST.Interfaces.IManaged.MACGenerator(System.Byte[],System.Byte[],GOST.Types.SBlockTypes)">
+            <summary>
+            MAC generator.
+            </summary>
+            <param name="key">256 bit key.</param>
+            <param name="message">Message (not less than 2 blocks).</param>
+            <param name="sBlockType">SBlock.</param>
+            <returns>MAC.</returns>
+        </member>
+        <member name="M:GOST.Interfaces.ICFBCipher.SetIV(System.Byte[])">
+            <summary>
+            Set generator state.
+            </summary>
+            <param name="iv">IV</param>
+        </member>
+        <member name="M:GOST.Interfaces.ICFBCipher.EncodeProcess(System.Byte[],System.Collections.Generic.List{System.UInt32})">
+            <summary>
+            CFB encode.
+            </summary>
+            <param name="data">Opened message.</param>
+            <param name="subKeys">Subkeys.</param>
+            <returns>Encoded message.</returns>
+        </member>
+        <member name="M:GOST.Interfaces.ICFBCipher.DecodeProcess(System.Byte[],System.Collections.Generic.List{System.UInt32})">
+            <summary>
+            CFB decode.
+            </summary>
+            <param name="data">Encoded message.</param>
+            <param name="subKeys">Subkeys.</param>
+            <returns>Opened message.</returns>
+        </member>
+        <member name="M:GOST.Interfaces.ISubstitutionCipher.EncodeProcess(System.Byte[],System.Collections.Generic.List{System.UInt32})">
+            <summary>
+            Substitution encode.
+            </summary>
+            <param name="data">Opened message multiple of 64 bits.</param>
+            <param name="subKeys">Subkeys.</param>
+            <returns>Encoded message multiple of 64 bits.</returns>
+        </member>
+        <member name="M:GOST.Interfaces.ISubstitutionCipher.DecodeProcess(System.Byte[],System.Collections.Generic.List{System.UInt32})">
+            <summary>
+            Substitution decode.
+            </summary>
+            <param name="data">Encoded message multiple of 64 bits.</param>
+            <param name="subKeys">Subkeys.</param>
+            <returns>Opened message multiple of 64 bits.</returns>
+        </member>
+        <member name="M:GOST.Interfaces.ISubstitutionCipher.Function(System.UInt32,System.UInt32)">
+            <summary>
+            Main func.
+            </summary>
+            <param name="block">Little bits.</param>
+            <param name="subKey">Subkeys.</param>
+            <returns>Result.</returns>
+        </member>
+        <member name="M:GOST.Interfaces.ISubstitutionCipher.Substitute(System.UInt32)">
+            <summary>
+            Substitution.
+            </summary>
+            <param name="value">Block for substitution.</param>
+            <returns>Result.</returns>
+        </member>
+        <member name="M:GOST.Interfaces.IXORCipher.SetIV(System.Byte[],System.Collections.Generic.List{System.UInt32})">
+            <summary>
+            Первоначальная установка состояния шифра.
+            </summary>
+            <param name="iv">Синхропосылка.</param>
+            <param name="subKeys">Подключи.</param>
+        </member>
+        <member name="M:GOST.Interfaces.IXORCipher.EncodeProcess(System.Byte[],System.Collections.Generic.List{System.UInt32})">
+            <summary>
+            Процесс шифрования открытого текста
+            </summary>
+            <param name="data">Блок открытого текста.</param>
+            <param name="subKeys">Коллекция подключей.</param>
+            <returns>Блок шифротекста.</returns>
+        </member>
+        <member name="M:GOST.Interfaces.IXORCipher.DecodeProcess(System.Byte[],System.Collections.Generic.List{System.UInt32})">
+            <summary>
+            Процесс дешифровки шифротекста.
+            </summary>
+            <param name="data">Блок открытого текста.</param>
+            <param name="subKeys">Коллекция подключей.</param>
+            <returns>Блок открытого текста.</returns>
+        </member>
+        <member name="T:GOST.GOSTManaged">
+            <summary>
+            GOST stream cipher.
+            </summary>
+        </member>
+        <member name="F:GOST.GOSTManaged.sBlock">
+            <summary>
+            SBlock table.
+            </summary>
+        </member>
+        <member name="F:GOST.GOSTManaged.sBlockType">
+            <summary>
+            SBlock type.
+            </summary>
+        </member>
+        <member name="F:GOST.GOSTManaged.key">
+            <summary>
+            256 bit key;
+            </summary>
+        </member>
+        <member name="F:GOST.GOSTManaged.message">
+            <summary>
+            Message.
+            </summary>
+        </member>
+        <member name="F:GOST.GOSTManaged.iv">
+            <summary>
+            64 bit IV.
+            </summary>
+        </member>
+        <member name="F:GOST.GOSTManaged.subKeys">
+            <summary>
+            Subkeys.
+            </summary>
+        </member>
+        <member name="F:GOST.GOSTManaged.released">
+            <summary>
+            IDisposable flag;
+            </summary>
+        </member>
+        <member name="P:GOST.GOSTManaged.Key">
+            <summary>
+            Check key length.
+            </summary>
+            <exception cref="T:System.ArgumentException">Key must have 256 bit length.</exception>
+        </member>
+        <member name="P:GOST.GOSTManaged.Message">
+            <summary>
+            Check message.
+            </summary>
+            <exception cref="T:System.ArgumentException">Empty message.</exception>
+        </member>
+        <member name="P:GOST.GOSTManaged.IV">
+            <summary>
+            Check IV.
+            </summary>
+            <exception cref="T:System.ArgumentException">IV must have 256 bit length.</exception>
+        </member>
+        <member name="M:GOST.GOSTManaged.#ctor">
+            <summary>
+            GOST stream cipher.
+            </summary>
+        </member>
+        <member name="M:GOST.GOSTManaged.SetSBlock">
+            <summary>
+            Set SBlockTable.
+            </summary>
+            <exception cref="T:System.Exception">Oops...</exception>
+        </member>
+        <member name="M:GOST.GOSTManaged.GetSubKeys">
+            <summary>
+            Generate subkeys.
+            </summary>
+        </member>
+        <member name="M:GOST.GOSTManaged.SubstitutionEncode(System.Byte[],System.Byte[],GOST.Types.SBlockTypes)">
+            <summary>
+            Substitution encode.
+            </summary>
+            <param name="key">256 bit key.</param>
+            <param name="message">Opened message multiple of 64 bit.</param>
+            <param name="sBlockType">STable.</param>
+            <returns>Encoded message.</returns>
+            <exception cref="T:System.Exception"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:GOST.GOSTManaged.SubstitutionDecode(System.Byte[],System.Byte[],GOST.Types.SBlockTypes)">
+            <summary>
+            Substitution decode.
+            </summary>
+            <param name="key">256 bit key.</param>
+            <param name="message">Encoded message multiple of 64 bit.</param>
+            <param name="sBlockType">STable.</param>
+            <returns>Opened message</returns>
+            <exception cref="T:System.Exception"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:GOST.GOSTManaged.SubstitutionProcess(System.Boolean)">
+            <summary>
+            Substitution.
+            </summary>
+            <param name="flag">Encode/decode.</param>
+            <returns>Result.</returns>
+        </member>
+        <member name="M:GOST.GOSTManaged.XOREncode(System.Byte[],System.Byte[],System.Byte[],GOST.Types.SBlockTypes)">
+            <summary>
+            XOR encode.
+            </summary>
+            <param name="key">256 bit key.</param>
+            <param name="iv">64 bit IV</param>
+            <param name="message">Opened message.</param>
+            <param name="sBlockType">STable.</param>
+            <returns>Encoded message.</returns>
+            <exception cref="T:System.Exception"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:GOST.GOSTManaged.XORDecode(System.Byte[],System.Byte[],System.Byte[],GOST.Types.SBlockTypes)">
+            <summary>
+            XOR decode.
+            </summary>
+            <param name="key">256 bit key.</param>
+            <param name="iv">64 bit IV</param>
+            <param name="message">Encoded message.</param>
+            <param name="sBlockType">STable.</param>
+            <returns>Opened message.</returns>
+            <exception cref="T:System.Exception"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:GOST.GOSTManaged.XORProcess">
+            <summary>
+            XOR.
+            </summary>
+            <returns>Result.</returns>
+        </member>
+        <member name="M:GOST.GOSTManaged.CFBEncode(System.Byte[],System.Byte[],System.Byte[],GOST.Types.SBlockTypes)">
+            <summary>
+            CFB encode.
+            </summary>
+            <param name="key">256 bit key.</param>
+            <param name="iv">64 bit IV</param>
+            <param name="message">Opened message.</param>
+            <param name="sBlockType">STable.</param>
+            <returns>Encoded message.</returns>
+            <exception cref="T:System.Exception"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:GOST.GOSTManaged.CFBDecode(System.Byte[],System.Byte[],System.Byte[],GOST.Types.SBlockTypes)">
+            <summary>
+            CFB decode.
+            </summary>
+            <param name="key">256 bit key.</param>
+            <param name="iv">64 bit IV</param>
+            <param name="message">Encoded message.</param>
+            <param name="sBlockType">STable.</param>
+            <returns>Opened message.</returns>
+            <exception cref="T:System.Exception"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:GOST.GOSTManaged.CFBProcess(System.Boolean)">
+            <summary>
+            CFB.
+            </summary>
+            <param name="flag">Encode/decode.</param>
+            <returns>Result.</returns>
+        </member>
+        <member name="M:GOST.GOSTManaged.MACGenerator(System.Byte[],System.Byte[],GOST.Types.SBlockTypes)">
+            <summary>
+            MAC generator.
+            </summary>
+            <param name="key">256 bit key.</param>
+            <param name="message">Message (not less than 2 blocks).</param>
+            <param name="sBlockType">SBlock.</param>
+            <returns>MAC.</returns>
+        </member>
+        <member name="M:GOST.GOSTManaged.MACProcess">
+            <summary>
+            MAC.
+            </summary>
+            <returns>Result.</returns>
+        </member>
+        <member name="M:GOST.GOSTManaged.ReadByChunk">
+            <summary>
+            Read message by chunks.
+            </summary>
+            <returns>At least 64 bit block.</returns>
+        </member>
+        <member name="M:GOST.GOSTManaged.Dispose">
+            <summary>
+            Dispose.
+            </summary>
+        </member>
+        <member name="T:GOST.Types.SBlockTypes">
+            <summary>
+            Enum of STables
+            </summary>
+        </member>
+    </members>
+</doc>

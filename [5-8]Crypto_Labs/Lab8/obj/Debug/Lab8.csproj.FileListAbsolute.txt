@@ -5,3 +5,10 @@ C:\Users\GRN\Desktop\[5-8]Crypto_Labs\Lab8\obj\Debug\Lab8.csprojResolveAssemblyR
 C:\Users\GRN\Desktop\[5-8]Crypto_Labs\Lab8\obj\Debug\Lab8.csproj.CoreCompileInputs.cache
 C:\Users\GRN\Desktop\[5-8]Crypto_Labs\Lab8\obj\Debug\Lab8.exe
 C:\Users\GRN\Desktop\[5-8]Crypto_Labs\Lab8\obj\Debug\Lab8.pdb
+D:\Study\3k2s\GitRep\Crypto-2019\[5-8]Crypto_Labs\Lab8\bin\Debug\Lab8.exe.config
+D:\Study\3k2s\GitRep\Crypto-2019\[5-8]Crypto_Labs\Lab8\bin\Debug\Lab8.exe
+D:\Study\3k2s\GitRep\Crypto-2019\[5-8]Crypto_Labs\Lab8\bin\Debug\Lab8.pdb
+D:\Study\3k2s\GitRep\Crypto-2019\[5-8]Crypto_Labs\Lab8\obj\Debug\Lab8.csprojResolveAssemblyReference.cache
+D:\Study\3k2s\GitRep\Crypto-2019\[5-8]Crypto_Labs\Lab8\obj\Debug\Lab8.csproj.CoreCompileInputs.cache
+D:\Study\3k2s\GitRep\Crypto-2019\[5-8]Crypto_Labs\Lab8\obj\Debug\Lab8.exe
+D:\Study\3k2s\GitRep\Crypto-2019\[5-8]Crypto_Labs\Lab8\obj\Debug\Lab8.pdb
